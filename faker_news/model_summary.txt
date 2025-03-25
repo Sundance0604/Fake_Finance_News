@@ -1,0 +1,40 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     AR   R-squared:                       0.023
+Model:                            OLS   Adj. R-squared:                  0.022
+Method:                 Least Squares   F-statistic:                     33.30
+Date:                Mon, 10 Mar 2025   Prob (F-statistic):           1.70e-89
+Time:                        23:06:05   Log-Likelihood:                 38456.
+No. Observations:               20223   AIC:                        -7.688e+04
+Df Residuals:                   20208   BIC:                        -7.676e+04
+Df Model:                          14                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept             -2900.2389    904.257     -3.207      0.001   -4672.656   -1127.822
+truth                     0.0039      0.001      6.289      0.000       0.003       0.005
+Post                     -0.0024      0.001     -4.031      0.000      -0.004      -0.001
+did                       0.0011      0.001      1.538      0.124      -0.000       0.003
+AssetReturn               0.0006      0.000      3.392      0.001       0.000       0.001
+AssetReturn_TTM          -0.0006      0.000     -3.024      0.002      -0.001      -0.000
+OperatingProfitMargin -7.774e-06   1.53e-06     -5.068      0.000   -1.08e-05   -4.77e-06
+CurrentRatio              0.0005      0.000      4.067      0.000       0.000       0.001
+QuickRatio               -0.0015      0.000     -6.156      0.000      -0.002      -0.001
+NetDebtRatio             29.0023      9.043      3.207      0.001      11.278      46.727
+AssetTurnover            -0.0091      0.005     -1.665      0.096      -0.020       0.002
+AssetTurnover_TTM         0.0103      0.005      1.923      0.055      -0.000       0.021
+DebtRatio                29.0023      9.043      3.207      0.001      11.278      46.727
+NonCurrentAsset_Ratio  9.003e-05   1.49e-05      6.055      0.000    6.09e-05       0.000
+length                -2.349e-06   1.59e-07    -14.737      0.000   -2.66e-06   -2.04e-06
+==============================================================================
+Omnibus:                     5640.003   Durbin-Watson:                   1.840
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           657338.313
+Skew:                           0.120   Prob(JB):                         0.00
+Kurtosis:                      30.929   Cond. No.                     8.59e+09
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 8.59e+09. This might indicate that there are
+strong multicollinearity or other numerical problems.

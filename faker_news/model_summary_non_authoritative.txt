@@ -1,0 +1,41 @@
+DID Regression Results for is_authoritative = 0 (Non-authoritative Sources):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     AR   R-squared:                       0.037
+Model:                            OLS   Adj. R-squared:                  0.036
+Method:                 Least Squares   F-statistic:                     33.62
+Date:                Mon, 10 Mar 2025   Prob (F-statistic):           1.60e-83
+Time:                        23:18:47   Log-Likelihood:                 21224.
+No. Observations:               11298   AIC:                        -4.242e+04
+Df Residuals:                   11284   BIC:                        -4.232e+04
+Df Model:                          13                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept             -3815.5038   1246.587     -3.061      0.002   -6259.032   -1371.975
+truth                     0.0031      0.001      3.772      0.000       0.001       0.005
+Post                     -0.0019      0.001     -2.794      0.005      -0.003      -0.001
+did                    1.682e-06    5.5e-07      3.061      0.002    6.05e-07    2.76e-06
+AssetReturn           -7.803e-05      0.000     -0.330      0.741      -0.001       0.000
+AssetReturn_TTM        7.871e-05      0.000      0.313      0.754      -0.000       0.001
+OperatingProfitMargin -9.639e-06   1.95e-06     -4.934      0.000   -1.35e-05   -5.81e-06
+CurrentRatio              0.0010      0.000      4.106      0.000       0.000       0.001
+QuickRatio               -0.0022      0.000     -5.169      0.000      -0.003      -0.001
+NetDebtRatio             38.1550     12.466      3.061      0.002      13.720      62.590
+AssetTurnover            -0.0132      0.008     -1.714      0.087      -0.028       0.002
+AssetTurnover_TTM         0.0146      0.008      1.925      0.054      -0.000       0.029
+DebtRatio                38.1550     12.466      3.061      0.002      13.720      62.590
+NonCurrentAsset_Ratio     0.0001   2.13e-05      5.721      0.000       8e-05       0.000
+length                -3.166e-06   1.95e-07    -16.252      0.000   -3.55e-06   -2.78e-06
+==============================================================================
+Omnibus:                     3922.524   Durbin-Watson:                   1.851
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           829483.196
+Skew:                           0.450   Prob(JB):                         0.00
+Kurtosis:                      44.967   Cond. No.                     4.70e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 3.5e-27. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
