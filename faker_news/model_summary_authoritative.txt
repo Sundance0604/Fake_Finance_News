@@ -1,41 +1,42 @@
 DID Regression Results for is_authoritative = 1 (Authoritative Sources):
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                     AR   R-squared:                       0.017
-Model:                            OLS   Adj. R-squared:                  0.016
-Method:                 Least Squares   F-statistic:                     12.18
-Date:                Mon, 10 Mar 2025   Prob (F-statistic):           7.99e-27
-Time:                        23:18:47   Log-Likelihood:                 17324.
-No. Observations:                8925   AIC:                        -3.462e+04
-Df Residuals:                    8911   BIC:                        -3.452e+04
-Df Model:                          13                                         
+Dep. Variable:                     AR   R-squared:                       0.013
+Model:                            OLS   Adj. R-squared:                  0.011
+Method:                 Least Squares   F-statistic:                     7.296
+Date:                Sat, 05 Apr 2025   Prob (F-statistic):           2.72e-16
+Time:                        17:16:55   Log-Likelihood:                 16499.
+No. Observations:                8463   AIC:                        -3.297e+04
+Df Residuals:                    8447   BIC:                        -3.285e+04
+Df Model:                          15                                         
 Covariance Type:            nonrobust                                         
-=========================================================================================
-                            coef    std err          t      P>|t|      [0.025      0.975]
------------------------------------------------------------------------------------------
-Intercept             -2826.1490   1329.708     -2.125      0.034   -5432.683    -219.616
-truth                     0.0024      0.001      2.233      0.026       0.000       0.004
-Post                     -0.0010      0.000     -2.586      0.010      -0.002      -0.000
-did                      -0.0010      0.000     -2.593      0.010      -0.002      -0.000
-AssetReturn               0.0018      0.000      6.000      0.000       0.001       0.002
-AssetReturn_TTM          -0.0018      0.000     -5.554      0.000      -0.002      -0.001
-OperatingProfitMargin -4.739e-06   2.55e-06     -1.857      0.063   -9.74e-06    2.64e-07
-CurrentRatio              0.0004      0.000      2.177      0.029    3.54e-05       0.001
-QuickRatio               -0.0014      0.000     -4.746      0.000      -0.002      -0.001
-NetDebtRatio             28.2614     13.297      2.125      0.034       2.196      54.327
-AssetTurnover            -0.0130      0.008     -1.685      0.092      -0.028       0.002
-AssetTurnover_TTM         0.0137      0.008      1.777      0.076      -0.001       0.029
-DebtRatio                28.2614     13.297      2.125      0.034       2.196      54.327
-NonCurrentAsset_Ratio  2.884e-05   2.11e-05      1.365      0.172   -1.26e-05    7.02e-05
-length                -3.785e-07   2.87e-07     -1.319      0.187   -9.41e-07    1.84e-07
 ==============================================================================
-Omnibus:                     1088.958   Durbin-Watson:                   1.834
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8369.710
-Skew:                          -0.327   Prob(JB):                         0.00
-Kurtosis:                       7.699   Cond. No.                     1.46e+17
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0102      0.021      0.483      0.629      -0.031       0.052
+truth          0.0044      0.001      3.755      0.000       0.002       0.007
+Post           0.0002      0.001      0.170      0.865      -0.002       0.002
+did           -0.0053      0.002     -3.336      0.001      -0.008      -0.002
+ARE            0.0002   3.65e-05      4.631      0.000    9.74e-05       0.000
+OPM        -8.021e-06   2.39e-06     -3.355      0.001   -1.27e-05   -3.33e-06
+CR             0.0003      0.000      1.937      0.053   -3.75e-06       0.001
+QR            -0.0017      0.000     -5.835      0.000      -0.002      -0.001
+ND            -0.0001      0.000     -0.689      0.491      -0.001       0.000
+AT             0.0010      0.001      1.084      0.278      -0.001       0.003
+Soe            0.0022      0.001      2.123      0.034       0.000       0.004
+Dual          -0.0008      0.001     -0.866      0.387      -0.002       0.001
+Indep          0.0015      0.007      0.229      0.819      -0.012       0.015
+Lev           -0.0127      0.020     -0.645      0.519      -0.051       0.026
+Size          -0.0002      0.001     -0.317      0.751      -0.002       0.001
+Big4           0.0017      0.002      0.962      0.336      -0.002       0.005
+==============================================================================
+Omnibus:                     1106.917   Durbin-Watson:                   1.886
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8708.238
+Skew:                          -0.374   Prob(JB):                         0.00
+Kurtosis:                       7.913   Cond. No.                     1.37e+04
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The smallest eigenvalue is 1.91e-24. This might indicate that there are
-strong multicollinearity problems or that the design matrix is singular.
+[2] The condition number is large, 1.37e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

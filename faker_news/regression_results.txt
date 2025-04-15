@@ -1,21 +1,57 @@
 回归结果（OLS 估计）
 
-R²: 0.02144,  调整 R²: 0.02037
+R²: 0.05163,  调整 R²: 0.03744
 
 
 回归系数（Coefficient）：
 
-const       -0.01826
-sentiment    0.04089
+const       -0.02037
+sentiment    0.03921
+ARE          0.00038
+OPM         -0.00005
+CR           0.00315
+QR          -0.00680
+ND          -0.00049
+AT           0.00836
+Soe         -0.00432
+Dual        -0.02919
+Indep       -0.04587
+Lev         -0.01672
+Size         0.00710
+Big4        -0.01243
 
 
 标准误差（Standard Error）：
 
-const        0.00441
-sentiment    0.00914
+const        0.24318
+sentiment    0.00955
+ARE          0.00046
+OPM          0.00003
+CR           0.00223
+QR           0.00415
+ND           0.00226
+AT           0.00926
+Soe          0.01193
+Dual         0.01040
+Indep        0.07934
+Lev          0.22590
+Size         0.00923
+Big4         0.01920
 
 
 P 值（P-Values）：
 
-const        0.00004
-sentiment    0.00001
+const        0.93325
+sentiment    0.00004
+ARE          0.41832
+OPM          0.08164
+CR           0.15760
+QR           0.10204
+ND           0.82830
+AT           0.36676
+Soe          0.71711
+Dual         0.00513
+Indep        0.56329
+Lev          0.94101
+Size         0.44191
+Big4         0.51737

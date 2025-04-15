@@ -1,40 +1,41 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                    CAR   R-squared:                       0.098
-Model:                            OLS   Adj. R-squared:                  0.097
-Method:                 Least Squares   F-statistic:                     137.3
-Date:                Tue, 01 Apr 2025   Prob (F-statistic):               0.00
-Time:                        11:30:09   Log-Likelihood:                 15644.
-No. Observations:               17682   AIC:                        -3.126e+04
-Df Residuals:                   17667   BIC:                        -3.114e+04
-Df Model:                          14                                         
+Dep. Variable:          Q("CAR_-1_3")   R-squared:                       0.038
+Model:                            OLS   Adj. R-squared:                  0.021
+Method:                 Least Squares   F-statistic:                     2.282
+Date:                Sat, 05 Apr 2025   Prob (F-statistic):            0.00360
+Time:                        17:14:35   Log-Likelihood:                 522.60
+No. Observations:                 883   AIC:                            -1013.
+Df Residuals:                     867   BIC:                            -936.7
+Df Model:                          15                                         
 Covariance Type:            nonrobust                                         
-=========================================================================================
-                            coef    std err          t      P>|t|      [0.025      0.975]
------------------------------------------------------------------------------------------
-Intercept             -1.635e+04   2706.004     -6.041      0.000   -2.17e+04    -1.1e+04
-sentiment                 0.0219      0.002     13.078      0.000       0.019       0.025
-variance                  0.0443      0.010      4.355      0.000       0.024       0.064
-l1_norm                  -0.0003    3.1e-05    -11.004      0.000      -0.000      -0.000
-mean                      0.1035      0.005     19.910      0.000       0.093       0.114
-AssetReturn               0.0068      0.001     13.050      0.000       0.006       0.008
-AssetReturn_TTM          -0.0078      0.001    -13.866      0.000      -0.009      -0.007
-OperatingProfitMargin -6.663e-06   4.29e-06     -1.553      0.120   -1.51e-05    1.75e-06
-CurrentRatio              0.0021      0.000      5.719      0.000       0.001       0.003
-QuickRatio               -0.0034      0.001     -5.004      0.000      -0.005      -0.002
-NetDebtRatio            163.4806     27.060      6.041      0.000     110.440     216.521
-AssetTurnover             0.0028      0.016      0.177      0.860      -0.028       0.034
-AssetTurnover_TTM         0.0044      0.016      0.279      0.780      -0.026       0.035
-DebtRatio               163.4806     27.060      6.041      0.000     110.440     216.521
-NonCurrentAsset_Ratio     0.0006   4.36e-05     12.892      0.000       0.000       0.001
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                 -0.0129      0.246     -0.053      0.958      -0.496       0.470
+truth                     -0.0225      0.013     -1.769      0.077      -0.047       0.002
+is_authoritative          -0.0030      0.013     -0.230      0.818      -0.028       0.022
+truth:is_authoritative     0.0099      0.019      0.517      0.605      -0.028       0.048
+ARE                        0.0004      0.000      0.897      0.370      -0.001       0.001
+OPM                    -4.961e-05   2.83e-05     -1.753      0.080      -0.000    5.93e-06
+CR                         0.0032      0.002      1.432      0.153      -0.001       0.008
+QR                        -0.0075      0.004     -1.793      0.073      -0.016       0.001
+ND                        -0.0006      0.002     -0.255      0.799      -0.005       0.004
+AT                         0.0059      0.009      0.637      0.525      -0.012       0.024
+Soe                       -0.0049      0.012     -0.407      0.684      -0.029       0.019
+Dual                      -0.0297      0.011     -2.824      0.005      -0.050      -0.009
+Indep                     -0.0423      0.080     -0.528      0.597      -0.199       0.115
+Lev                       -0.0263      0.228     -0.115      0.908      -0.474       0.422
+Size                       0.0091      0.009      0.976      0.329      -0.009       0.028
+Big4                      -0.0181      0.019     -0.937      0.349      -0.056       0.020
 ==============================================================================
-Omnibus:                     5275.358   Durbin-Watson:                   1.463
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           140684.376
-Skew:                          -0.854   Prob(JB):                         0.00
-Kurtosis:                      16.713   Cond. No.                     7.68e+08
+Omnibus:                      404.518   Durbin-Watson:                   1.803
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6562.221
+Skew:                          -1.659   Prob(JB):                         0.00
+Kurtosis:                      15.937   Cond. No.                     1.26e+04
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 7.68e+08. This might indicate that there are
+[2] The condition number is large, 1.26e+04. This might indicate that there are
 strong multicollinearity or other numerical problems.
