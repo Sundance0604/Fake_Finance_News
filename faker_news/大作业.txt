@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{基于深度学习的假财务新闻检测：来自中国的证据}
+\author{刘大爷 \\ \small{中央财经大学 信息管理与信息系统}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+随着社交媒体的迅速发展，假新闻的传播在金融市场中造成了严重的影响，尤其是财务新闻。尽管假新闻检测已成为一个备受关注的研究领域，但在财务新闻领域的研究仍然有限。特别是在中国，缺乏公开的假财务新闻数据集。本研究针对中国金融市场，构建了一个独特的数据集，并提出了一种基于深度学习的方法来检测假财务新闻。通过对比多种基准模型，本文的方法表现出优异的性能，准确率为94.38%，F1分数为87.67%。
+\end{abstract}
+
+\section{引言}
+随着金融市场的快速发展，投资者越来越依赖财务新闻来做出投资决策。然而，随着社交媒体的普及，假新闻在市场上的传播变得极为迅速，可能对个人和社会造成极大的负面影响。尤其是在中国，假财务新闻的影响可能对金融市场的稳定性产生严重威胁。因此，检测假财务新闻成为保护投资者利益和稳定市场的重要任务。
+
+\section{研究背景与相关工作}
+假新闻的定义是“故意且可验证为虚假的新闻文章，可能误导读者”。目前，假新闻检测研究多集中在政治和社会领域，对于财务领域的研究仍然较少。现有的假新闻数据集主要来源于政治和社会领域，例如FakeNewsNet数据集和LIAR数据集，但这些数据集并不包含财务新闻。因此，本文构建了一个独特的中国金融市场假财务新闻数据集，并提出了一种结合内容特征、上下文特征和财务特征的深度学习模型来检测假财务新闻。
+
+\section{数据收集与处理}
+\subsection{数据集构建}
+本文的数据集由160篇假新闻和480篇真实新闻组成，数据时间跨度为2019年1月到2022年12月。假新闻样本来自中国证监会指定的信息披露网站Cninfo上的上市公司澄清公告。我们通过这些澄清公告获取与假新闻相关的信息，并通过互联网检索假新闻的具体内容。为了保证数据的代表性，我们从Wind数据库随机选择了480篇真实新闻，这些新闻的时间分布与假新闻样本相一致。
+
+\subsection{特征选择}
+每篇新闻文章包含以下特征：
+\begin{itemize}
+    \item 内容特征：包括新闻的标题和正文内容。
+    \item 上下文特征：包括新闻的发布来源、文本长度和文本情感得分。
+    \item 财务特征：包括与新闻相关公司的财务数据，例如资产回报率、运营利润率、总资产周转率等。
+\end{itemize}
+
+情感得分通过使用由姜等人构建的中文金融情感词典以及基于Loughran-MacDonald词典的word2vec算法进行计算。
+
+\section{模型构建与方法}
+\subsection{深度学习模型}
+为了有效利用不同类型的特征，本文提出了一种结合两种深度神经子网络的模型：
+\begin{itemize}
+    \item 第一个子网络用于处理新闻的内容特征。我们使用BERT-Chinese-wwm模型生成文本的词向量，并通过三并行的卷积神经网络（CNN）组件提取文本的局部特征。
+    \item 第二个子网络处理上下文特征和财务特征。这些特征被拼接成一个特征向量输入到该子网络，进行后续的分类。
+\end{itemize}
+
+\subsection{模型架构}
+我们模型的架构如图\ref{fig:model}所示。第一个子网络通过BERT生成文本的词嵌入表示，并使用CNN组件提取多层次的文本特征。第二个子网络则融合了上下文特征和财务特征，并与第一个子网络的输出结合，通过全连接层进行最终的分类。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{model_architecture.png}
+    \caption{模型架构示意图}
+    \label{fig:model}
+\end{figure}
+
+\section{实验设计与结果分析}
+\subsection{实验设置}
+我们将数据集中的75\%数据用于训练，剩余25\%数据用于测试。为评估模型的表现，我们使用混淆矩阵计算精确度（Precision）、召回率（Recall）、准确率（Accuracy）和F1分数（F1-Score）。实验的基准模型包括逻辑回归（Logistic Regression）、决策树（Decision Trees）、随机森林（Random Forest）和朴素贝叶斯（Naïve Bayes）。
+
+\subsection{实验结果}
+表\ref{tab:results}总结了不同模型的评估结果。从实验结果可以看出，基准模型的F1分数较低，尤其是在召回率方面。相比之下，我们提出的深度学习模型在准确率（94.38\%）和F1分数（87.67\%）上均优于其他模型。
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+模型 & 准确率 & 精确度 & 召回率 & F1分数 \\
+\hline
+逻辑回归 & 89.81\% & 83.45\% & 71.54\% & 76.87\% \\
+决策树 & 83.88\% & 65.53\% & 68.38\% & 66.81\% \\
+随机森林 & 88.38\% & 81.01\% & 67.03\% & 73.29\% \\
+朴素贝叶斯 & 84.63\% & 68.88\% & 64.47\% & 66.52\% \\
+基本深度神经网络 & 90.38\% & 83.46\% & 74.59\% & 78.74\% \\
+提出的模型 & \textbf{94.38\%} & \textbf{86.49\%} & \textbf{88.89\%} & \textbf{87.67\%} \\
+\hline
+\end{tabular}
+\caption{实验结果比较}
+\label{tab:results}
+\end{table}
+
+\section{结论}
+本研究提出了一种基于深度学习的假财务新闻检测方法，并在一个自建的数据集上进行实验。结果表明，我们的模型在准确性和F1分数上都优于其他基准模型。消融实验表明，内容特征对于假新闻的检测至关重要。通过Shapley值分析，我们发现文本长度、发布来源以及情感得分是判断假新闻的重要特征。未来的研究可以进一步扩展数据集并增加更多特征，以进一步提高检测效果。
+
+\begin{thebibliography}{99}
+\bibitem{allcott} H. Allcott, M. Gentzkow, "Social media and fake news in the 2016 election," \textit{Journal of Economic Perspectives}, 31(2): 211-236, 2017.
+\bibitem{kogan} S. Kogan, T. J. Moskowitz, M. Niessner, "Social Media and Financial News Manipulation," \textit{Review of Finance}, online, 2022.
+\bibitem{imbw} J. L. Imbwaga, N. Chittaragi, S. Koolagudi, "Fake News Detection using Machine Learning Algorithms," \textit{Proceedings of the Fourteenth International Conference on Contemporary Computing}, India, 271-275, 2022.
+\end{thebibliography}
+
+\end{document}

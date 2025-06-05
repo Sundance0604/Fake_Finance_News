@@ -1,0 +1,41 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   mean   R-squared:                       0.081
+Model:                            OLS   Adj. R-squared:                  0.065
+Method:                 Least Squares   F-statistic:                     5.009
+Date:                Thu, 15 May 2025   Prob (F-statistic):           5.04e-09
+Time:                        16:40:56   Log-Likelihood:                 261.53
+No. Observations:                 806   AIC:                            -493.1
+Df Residuals:                     791   BIC:                            -422.7
+Df Model:                          14                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+Intercept               0.0261      0.323      0.081      0.936      -0.608       0.661
+sentiment               0.0594      0.009      6.255      0.000       0.041       0.078
+sentiment:truth         0.0294      0.016      1.846      0.065      -0.002       0.061
+sentiment:inv_truth     0.0301      0.019      1.556      0.120      -0.008       0.068
+ARE                     0.0017      0.001      2.751      0.006       0.000       0.003
+OPM                    5.6e-07    3.7e-05      0.015      0.988   -7.21e-05    7.32e-05
+CR                     -0.0039      0.003     -1.317      0.188      -0.010       0.002
+QR                      0.0033      0.006      0.593      0.553      -0.008       0.014
+ND                      0.0015      0.003      0.497      0.619      -0.004       0.007
+AT                      0.0045      0.012      0.360      0.719      -0.020       0.029
+Soe                     0.0294      0.017      1.780      0.075      -0.003       0.062
+Dual                    0.0108      0.014      0.751      0.453      -0.017       0.039
+Indep                   0.0579      0.110      0.527      0.598      -0.158       0.274
+Lev                     0.2459      0.299      0.824      0.410      -0.340       0.832
+Size                   -0.0285      0.013     -2.261      0.024      -0.053      -0.004
+Big4                   -0.0260      0.027     -0.964      0.336      -0.079       0.027
+==============================================================================
+Omnibus:                       69.028   Durbin-Watson:                   1.878
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              244.843
+Skew:                           0.339   Prob(JB):                     6.81e-54
+Kurtosis:                       5.614   Cond. No.                     1.66e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 9.8e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
