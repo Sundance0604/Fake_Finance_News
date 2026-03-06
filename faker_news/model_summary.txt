@@ -1,41 +1,27 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                     AR   R-squared:                       0.014
-Model:                            OLS   Adj. R-squared:                  0.013
-Method:                 Least Squares   F-statistic:                     17.15
-Date:                Sat, 05 Apr 2025   Prob (F-statistic):           8.69e-46
-Time:                        09:52:26   Log-Likelihood:                 35540.
-No. Observations:               18585   AIC:                        -7.105e+04
-Df Residuals:                   18569   BIC:                        -7.092e+04
-Df Model:                          15                                         
+Dep. Variable:                     AR   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     7.639
+Date:                Sun, 13 Jul 2025   Prob (F-statistic):           4.23e-05
+Time:                        16:26:03   Log-Likelihood:                 36755.
+No. Observations:               19362   AIC:                        -7.350e+04
+Df Residuals:                   19358   BIC:                        -7.347e+04
+Df Model:                           3                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Intercept     -0.0029      0.014     -0.203      0.839      -0.031       0.025
-truth          0.0008      0.001      1.088      0.277      -0.001       0.002
-Post       -5.294e-05      0.001     -0.073      0.942      -0.001       0.001
-did           -0.0032      0.001     -3.050      0.002      -0.005      -0.001
-ARE            0.0001    2.7e-05      3.967      0.000    5.43e-05       0.000
-OPM        -1.081e-05   1.63e-06     -6.612      0.000    -1.4e-05    -7.6e-06
-CR             0.0006      0.000      4.309      0.000       0.000       0.001
-QR            -0.0015      0.000     -6.363      0.000      -0.002      -0.001
-ND            -0.0001      0.000     -0.978      0.328      -0.000       0.000
-AT             0.0010      0.001      1.778      0.075   -9.72e-05       0.002
-Soe            0.0010      0.001      1.430      0.153      -0.000       0.002
-Dual          -0.0046      0.001     -7.545      0.000      -0.006      -0.003
-Indep         -0.0036      0.005     -0.784      0.433      -0.013       0.005
-Lev           -0.0112      0.013     -0.849      0.396      -0.037       0.015
-Size           0.0015      0.001      2.731      0.006       0.000       0.003
-Big4           0.0003      0.001      0.258      0.797      -0.002       0.002
+Intercept     -0.0026      0.001     -5.007      0.000      -0.004      -0.002
+truth          0.0010      0.001      1.266      0.205      -0.001       0.002
+Post       -9.788e-05      0.001     -0.135      0.893      -0.002       0.001
+did           -0.0033      0.001     -3.167      0.002      -0.005      -0.001
 ==============================================================================
-Omnibus:                     5153.987   Durbin-Watson:                   1.914
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           118067.321
-Skew:                          -0.797   Prob(JB):                         0.00
-Kurtosis:                      15.244   Cond. No.                     1.25e+04
+Omnibus:                     5464.899   Durbin-Watson:                   1.898
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           699545.674
+Skew:                          -0.056   Prob(JB):                         0.00
+Kurtosis:                      32.447   Cond. No.                         6.93
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 1.25e+04. This might indicate that there are
-strong multicollinearity or other numerical problems.

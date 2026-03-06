@@ -1,0 +1,21 @@
+回归结果（OLS 估计）
+
+R²: 0.02497,  调整 R²: 0.02391
+
+
+回归系数（Coefficient）：
+
+const       -0.01881
+sentiment    0.04568
+
+
+标准误差（Standard Error）：
+
+const        0.00454
+sentiment    0.00941
+
+
+P 值（P-Values）：
+
+const        0.00004
+sentiment    0.00000

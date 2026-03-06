@@ -1,41 +1,41 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                   mean   R-squared:                       0.081
-Model:                            OLS   Adj. R-squared:                  0.065
-Method:                 Least Squares   F-statistic:                     5.009
-Date:                Thu, 15 May 2025   Prob (F-statistic):           5.04e-09
-Time:                        16:40:56   Log-Likelihood:                 261.53
-No. Observations:                 806   AIC:                            -493.1
-Df Residuals:                     791   BIC:                            -422.7
+Dep. Variable:          Q("CAR_-1_3")   R-squared:                       0.052
+Model:                            OLS   Adj. R-squared:                  0.036
+Method:                 Least Squares   F-statistic:                     3.382
+Date:                Sun, 13 Jul 2025   Prob (F-statistic):           2.40e-05
+Time:                        21:02:59   Log-Likelihood:                 528.95
+No. Observations:                 883   AIC:                            -1028.
+Df Residuals:                     868   BIC:                            -956.2
 Df Model:                          14                                         
 Covariance Type:            nonrobust                                         
 =======================================================================================
                           coef    std err          t      P>|t|      [0.025      0.975]
 ---------------------------------------------------------------------------------------
-Intercept               0.0261      0.323      0.081      0.936      -0.608       0.661
-sentiment               0.0594      0.009      6.255      0.000       0.041       0.078
-sentiment:truth         0.0294      0.016      1.846      0.065      -0.002       0.061
-sentiment:inv_truth     0.0301      0.019      1.556      0.120      -0.008       0.068
-ARE                     0.0017      0.001      2.751      0.006       0.000       0.003
-OPM                    5.6e-07    3.7e-05      0.015      0.988   -7.21e-05    7.32e-05
-CR                     -0.0039      0.003     -1.317      0.188      -0.010       0.002
-QR                      0.0033      0.006      0.593      0.553      -0.008       0.014
-ND                      0.0015      0.003      0.497      0.619      -0.004       0.007
-AT                      0.0045      0.012      0.360      0.719      -0.020       0.029
-Soe                     0.0294      0.017      1.780      0.075      -0.003       0.062
-Dual                    0.0108      0.014      0.751      0.453      -0.017       0.039
-Indep                   0.0579      0.110      0.527      0.598      -0.158       0.274
-Lev                     0.2459      0.299      0.824      0.410      -0.340       0.832
-Size                   -0.0285      0.013     -2.261      0.024      -0.053      -0.004
-Big4                   -0.0260      0.027     -0.964      0.336      -0.079       0.027
+Intercept              -0.0231      0.243     -0.095      0.924      -0.501       0.455
+sentiment               0.0269      0.007      3.933      0.000       0.013       0.040
+sentiment:truth         0.0098      0.012      0.856      0.392      -0.013       0.032
+sentiment:inv_truth     0.0170      0.014      1.224      0.221      -0.010       0.044
+ARE                     0.0004      0.000      0.798      0.425      -0.001       0.001
+OPM                 -4.872e-05   2.81e-05     -1.737      0.083      -0.000    6.35e-06
+CR                      0.0031      0.002      1.402      0.161      -0.001       0.008
+QR                     -0.0067      0.004     -1.623      0.105      -0.015       0.001
+ND                     -0.0005      0.002     -0.205      0.838      -0.005       0.004
+AT                      0.0084      0.009      0.908      0.364      -0.010       0.027
+Soe                    -0.0039      0.012     -0.327      0.744      -0.028       0.020
+Dual                   -0.0291      0.010     -2.799      0.005      -0.050      -0.009
+Indep                  -0.0470      0.079     -0.591      0.555      -0.203       0.109
+Lev                    -0.0139      0.226     -0.061      0.951      -0.458       0.430
+Size                    0.0071      0.009      0.764      0.445      -0.011       0.025
+Big4                   -0.0127      0.019     -0.662      0.508      -0.050       0.025
 ==============================================================================
-Omnibus:                       69.028   Durbin-Watson:                   1.878
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              244.843
-Skew:                           0.339   Prob(JB):                     6.81e-54
-Kurtosis:                       5.614   Cond. No.                     1.66e+18
+Omnibus:                      422.483   Durbin-Watson:                   1.811
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7175.549
+Skew:                          -1.745   Prob(JB):                         0.00
+Kurtosis:                      16.522   Cond. No.                     3.02e+17
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The smallest eigenvalue is 9.8e-30. This might indicate that there are
+[2] The smallest eigenvalue is 2.96e-28. This might indicate that there are
 strong multicollinearity problems or that the design matrix is singular.

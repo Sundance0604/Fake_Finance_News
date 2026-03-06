@@ -4,8 +4,8 @@ DID Regression Results for is_authoritative = 1 (Authoritative Sources):
 Dep. Variable:                     AR   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.011
 Method:                 Least Squares   F-statistic:                     7.296
-Date:                Sat, 05 Apr 2025   Prob (F-statistic):           2.72e-16
-Time:                        17:16:55   Log-Likelihood:                 16499.
+Date:                Sun, 13 Jul 2025   Prob (F-statistic):           2.72e-16
+Time:                        22:29:51   Log-Likelihood:                 16499.
 No. Observations:                8463   AIC:                        -3.297e+04
 Df Residuals:                    8447   BIC:                        -3.285e+04
 Df Model:                          15                                         
